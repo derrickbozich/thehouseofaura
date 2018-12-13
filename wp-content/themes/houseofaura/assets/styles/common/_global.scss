@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'auraregular';
+    src: url('../fonts/aura__-webfont.eot');
+    src: url('../fonts/aura__-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/aura__-webfont.woff2') format('woff2'),
+         url('../fonts/aura__-webfont.woff') format('woff'),
+         url('../fonts/aura__-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+  font-family: 'auraregular', serif;
+}
+
+//About Page
+.about {
+  p 
+    width: 50%;
+    --width: calc((100% / 10) * 6);
+    margin: auto;
+  }
+}
+
+//Contact Page
+.contact{
+  p {
+   text-align: center
+   font-size: 2vw;
+   a {
+     color: red;
+   }
+  }
+}
+
+//Home Page
+.home {
+  p {
+   text-align: center
+   font-size: 2vw;
+   a {
+     color: red;
+   }
+  }
+}
+
+a{
+  color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+.content{
+  .main{
+    font-size: 2vw;
+    margin: 1.5% auto;
+  }
+}
+
+.img{
+  width: 50%;
+}
+
+//900px or Less
+// @media only screen and (max-width: 900px) {
+//   .content{
+//     .main{
+//       font-size: 3vw;
+//       margin: auto;
+//     }
+//   }
+// }
+
+//800px or Less
+@media only screen and (max-width: 800px) {
+  .img{
+    width: 60%;
+  }
+  //About Page
+  .about {
+    p {
+      width: 60%;
+      margin: 2% auto;
+    }
+  }
+  .content{
+    .main{
+      font-size: 3vw;
+      // margin: 4% auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .img{
+    width: 100%;
+  }
+  .content{
+    .main{
+      font-size: 20px;
+      margin: 2% auto;
+    }
+  }
+  //About Page
+  .about {
+    p {
+      width: 90%;
+      --width: calc((100% / 10) * 8);
+      // margin: 4% auto;
+    }
+  }
+}

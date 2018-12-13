@@ -1,0 +1,54 @@
+//brand
+.brand{
+  font-size: 5vw;
+  text-decoration: none;
+  color: black;
+}
+
+//Nav Items
+.nav-primary{
+  .menu-home-container{
+    .menu-item{
+      font-size: 3vw;
+      margin-left: 20px;
+      text-decoration: underline solid black;
+    }
+  }
+}
+
+header{
+  .container{
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+
+}
+
+@media only screen and (max-width: 600px) {
+  header{
+    .container{
+      text-align: left;
+    }
+  }
+  //Nav Items
+  // .nav-primary{
+  //     text-align: center;
+  //   .menu-home-container{
+  //     font-family: 'auraregular';
+  //     .menu-item{
+  //       font-size: 30px;
+  //       // margin-left: 10%;
+  //       text-decoration: underline solid black;
+  //     }
+  //   }
+  // }
+  //brand
+  .brand{
+    font-size: 6vw;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+  }
+}
