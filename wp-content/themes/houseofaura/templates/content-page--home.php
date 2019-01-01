@@ -1,46 +1,61 @@
-<?php the_content(); ?>
+<?php // the_content(); ?>
+<div class="container home" id="home">
+    <script type="text/javascript">
+      let t = 0.1;
+      let numCircles = 8;
 
-<div class="container home alignedcenter">
-      <canvas class="" id="myCanvas" width="300" height="300"></canvas>
-      <div class="row justify-content-start">
-        <div class="col-4">
+      function setup() {
+      createCanvas(1000, 500);
+      noStroke();
 
-        </div>
-        <div class="col-4">
+      }
 
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-4">
+      function draw() {
+       // background(255,0,0);
+       translate(width/2, height/2);
+       // blendMode(LIGHTEST);
+       //circles(initial radius, pixels to subtract from radius of nested circles, angle, angleAdd)
 
-        </div>
-        <div class="col-4">
+       circles(250, 30, 0, radians(t));
+      // house();
+       t += 0.15;
+      }
 
-        </div>
-      </div>
-      <div class="row justify-content-end">
-        <div class="col-4">
 
-        </div>
-        <div class="col-4">
+      function circles(radius, rSub,angle, aAdd) {
+      push();
+          for (let i = numCircles; i > 0; i--){
+            if(i % 2 == 0){
+              c = 0;
+            } else {
+              c = 255;
+            }
+            fill(c);
+            ellipse(0, 0, radius * 2, radius * 2);
+            radius -= rSub;
+            angle += aAdd;
+            let r = rSub * 0.7;
+            let x = cos(angle + aAdd) * r;
+            let y = sin(angle + aAdd) * r;
+            translate(x, y);
+          }
+      pop();
+      }
 
-        </div>
-      </div>
-      <div class="row justify-content-around">
-        <div class="col-4">
+      function house(){
+      // let color = color(255, 204, 0);
 
-        </div>
-        <div class="col-4">
+      fill(255,0,0);
+      beginShape();
+      vertex(30, 20);
+      vertex(85, 20);
+      vertex(85, 75);
+      vertex(30, 75);
+      endShape(CLOSE);
+      }
+    </script>
 
-        </div>
-      </div>
-      <div class="row justify-content-between">
-        <div class="col-4">
 
-        </div>
-        <div class="col-4">
 
-        </div>
-      </div>
   <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
 </div>

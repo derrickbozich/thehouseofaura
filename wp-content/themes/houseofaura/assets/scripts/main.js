@@ -31,26 +31,49 @@
       init: function() {
         // JavaScript to be fired on the home page
 
-        // var c=document.getElementById("myCanvas");
-        // var ctx=c.getContext("2d");
-        // // var width = document.getElementById("container").offsetWidth;
-        // // var height = document.getElementById("container").offsetHeight;
-        // var red = 'rgba(255, 31, 0, 0.79)';
-        // var orange = 'rgba(249, 181, 6, 0.77)';
-        // var blue = 'rgba(0, 36, 255, 0.71)';
+        // get dimensions for canvas size
+        // var width = $("#anemic").width();
+        // var height = $("#anemic").height();
+        // var canvas = document.createElement("CANVAS");
+        // canvas.setAttribute("id", "canvas");
+        // canvas.setAttribute("width", width + "px");
+        // canvas.setAttribute("height", height + "px");
+        // document.getElementById("canvas-div").appendChild(canvas);
+        // var ctx = canvas.getContext("2d");
         //
-        // // Red rectangle
-        // ctx.fillStyle = red;
-        // ctx.fillRect(0, 0, 100, 100);
-        // // Orange rectangle
-        // ctx.fillStyle = orange;
-        // ctx.fillRect(0, 50, 100, 100);
-        // //Blue Rectangle
-        // ctx.fillStyle = blue;
-        // ctx.fillRect(0, 100, 100, 100);
+        // var img = document.getElementById("anemic");
+        //
+        //
+        // //red
+        // ctx.fillStyle = "rgba(255, 0, 125, 0.9)";
+        // ctx.beginPath();
+        // ctx.moveTo(0, height);
+        // ctx.lineTo(width, height);
+        // ctx.lineTo(width * 0.8, height * 0.97);
+        // ctx.lineTo(width * 0.2, height * 0.97);
+        // ctx.fill();
+        // //orange
+        // ctx.fillStyle = "rgba(255, 147, 0, 0.9)";
+        // ctx.fillRect( width/2.33, height/2.33, width, height);
+        //
+        // //circle
+        // ctx.beginPath();
+        //
+        // ctx.arc(width/2, height/2, 50, 0, 2 * Math.PI);
+        // ctx.fillStyle = "rgba(39, 17, 221, 0.84)";
+        // ctx.fill();
+
+        //img
+        // ctx.drawImage(img, 0, 0, width, height);
+
+
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
+        var canvas = document.getElementById("defaultCanvas0");
+        canvas.parentNode.removeChild(canvas);
+        var home = document.getElementById("home");
+        home.appendChild(canvas) 
       }
     },
     // About us page, note the change from about-us to about_us.

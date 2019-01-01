@@ -54,26 +54,26 @@ add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
 /**
  * Register sidebars
  */
-// function widgets_init() {
-//   register_sidebar([
-//     'name'          => __('Primary', 'sage'),
-//     'id'            => 'sidebar-primary',
-//     'before_widget' => '<section class="widget %1$s %2$s">',
-//     'after_widget'  => '</section>',
-//     'before_title'  => '<h3>',
-//     'after_title'   => '</h3>'
-//   ]);
-//
-//   register_sidebar([
-//     'name'          => __('Footer', 'sage'),
-//     'id'            => 'sidebar-footer',
-//     'before_widget' => '<section class="widget %1$s %2$s">',
-//     'after_widget'  => '</section>',
-//     'before_title'  => '<h3>',
-//     'after_title'   => '</h3>'
-//   ]);
-// }
-// add_action('widgets_init', __NAMESPACE__ . '\\widgets_init');
+function widgets_init() {
+  register_sidebar([
+    'name'          => __('Primary', 'sage'),
+    'id'            => 'sidebar-primary',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>'
+  ]);
+
+  register_sidebar([
+    'name'          => __('Footer', 'sage'),
+    'id'            => 'sidebar-footer',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>'
+  ]);
+}
+add_action('widgets_init', __NAMESPACE__ . '\\widgets_init');
 
 /**
  * Determine which pages should NOT display the sidebar
@@ -87,6 +87,12 @@ function display_sidebar() {
     true,
     is_404(),
     is_front_page(),
+    //About page
+    is_page( 24 ),
+    //Music page
+    is_page( 21 ),
+    //Contact page
+    is_page( 30 ),
     is_page_template('template-custom.php'),
   ]);
 
@@ -97,12 +103,12 @@ function display_sidebar() {
  * Theme assets
  */
 function assets() {
-  wp_enqueue_style('sage/css', Assets\asset_path('styles/main.css?v=20181210'), false, null);
+  wp_enqueue_style('sage/css', Assets\asset_path('styles/main.css?v=20181229'), false, null);
 
   if (is_single() && comments_open() && get_option('thread_comments')) {
     wp_enqueue_script('comment-reply');
   }
 
-  wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js?v=20181210'), ['jquery'], null, true);
+  wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js?v=20181229'), ['jquery'], null, true);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
