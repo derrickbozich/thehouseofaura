@@ -1,60 +1,71 @@
-//brand
-.brand{
-  font-size: 5vw;
+//banner
+.banner{
+  line-height: 1.2;
   text-decoration: none;
-  color: black;
-}
+  .brand{
+      color: red;
+      font-size: 10vw;
+  }
 
-//Nav Items
-.nav-primary{
-  .menu-home-container{
-    .menu-item{
-      font-size: 2.5vw;
-      margin-left: 30px;
-      a:hover {
-          text-decoration: underline solid black;
-          color: black;
+  //Nav Items
+  .nav-primary{
+    .menu-home-container{
+      .menu-item{
+        font-size: 3vw;
+        margin: 0 15px;
+        a:hover {
+            text-decoration: underline solid black;
+            color: black;
+        }
       }
-      // text-decoration: underline solid black;
-
-
     }
   }
 }
 
-header{
-  .container{
-    text-align: center;
-  }
-}
+
+
+
+
+
 
 @media only screen and (max-width: 800px) {
 
+
+  //banner
+  .banner{
+    .brand{
+      font-size: 9vw;
+    }
+    //Nav Items
+    .nav-primary{
+
+      .menu-home-container{
+        margin: auto;
+        .menu-item{
+          font-size: 4vw;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 600px) {
-  header{
-    .container{
-      text-align: left;
+
+  //banner
+  .banner{
+    .brand{
+      font-size: 12vw;
+      //Nav Items
+      .nav-primary{
+
+        .menu-home-container{
+          .menu-item{
+            font-size: 6vw;
+          }
+        }
+      }
     }
+
   }
-  //Nav Items
-  // .nav-primary{
-  //     text-align: center;
-  //   .menu-home-container{
-  //     font-family: 'auraregular';
-  //     .menu-item{
-  //       font-size: 30px;
-  //       // margin-left: 10%;
-  //       text-decoration: underline solid black;
-  //     }
-  //   }
-  // }
-  //brand
-  .brand{
-    font-size: 6vw;
-    text-decoration: none;
-    text-align: center;
-    color: black;
-  }
+
 }
