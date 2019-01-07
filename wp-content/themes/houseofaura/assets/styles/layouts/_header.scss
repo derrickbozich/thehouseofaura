@@ -3,15 +3,25 @@
   line-height: 1.2;
   text-decoration: none;
   .brand{
-      color: red;
-      font-size: 10vw;
+      color: rgba(255, 0, 0, 0.84);
+      font-size: 8vw;
+  }
+  a.brand:hover{
+    // how can you change underline thickness?
+    // --royalBlue: rgba(25, 90, 255, 0.71);
+    // text-decoration: underline solid var(--royalBlue);
   }
 
   //Nav Items
   .nav-primary{
     .menu-home-container{
+      .current-menu-item{
+        a{
+          text-decoration: underline solid black;
+        }
+      }
       .menu-item{
-        font-size: 3vw;
+        font-size: 2.5vw;
         margin: 0 15px;
         a:hover {
             text-decoration: underline solid black;

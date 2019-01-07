@@ -19,7 +19,7 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
-
+        
       },
       finalize: function() {
        // JavaScript to be fired on all pages, after page specific JS is fired
@@ -33,17 +33,6 @@
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
-        function insertCanvas(){
-          var canvas = document.getElementById("defaultCanvas0");
-          canvas.parentNode.removeChild(canvas);
-          var footer = document.getElementById("footer");
-          footer.prepend(canvas);
-        }
-
-        
-
-
-
       }
     },
     // About us page, note the change from about-us to about_us.

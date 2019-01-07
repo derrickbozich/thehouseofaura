@@ -6,7 +6,8 @@
       let numCircles = 8;
 
       function setup() {
-        var canvas = createCanvas(100, 100);
+        var width = windowWidth * 0.07;
+        var canvas = createCanvas(width, width);
         canvas.parent('sketch-holder');
         noStroke();
       }
@@ -41,5 +42,6 @@
 
 
   </div>
-  <h1>The House of Aura &copy; 2019</h1>
+  <div class="copyright">&copy; 2019</div>
+  <a href="http://www.derrickbozich.com"><div class="author">by derrick bozich</div></a>
 </footer>
