@@ -3,7 +3,7 @@
   line-height: 1.2;
   text-decoration: none;
   .brand{
-      color: rgba(255, 0, 0, 0.84);
+      // color: black;
       font-size: 8vw;
   }
   a.brand:hover{
@@ -15,32 +15,31 @@
   //Nav Items
   .nav-primary{
     .menu-home-container{
+
       .current-menu-item{
         a{
-          text-decoration: underline solid black;
+          text-decoration: underline solid red;
         }
       }
+
       .menu-item{
         font-size: 2.5vw;
         margin: 0 15px;
+        a{
+            color: red;
+        }
+
         a:hover {
-            text-decoration: underline solid black;
-            color: black;
+            text-decoration: underline solid red;
+            // color: black;
         }
       }
+      margin-bottom: 1.5em;
     }
   }
 }
 
-
-
-
-
-
-
 @media only screen and (max-width: 800px) {
-
-
   //banner
   .banner{
     .brand{
@@ -48,9 +47,8 @@
     }
     //Nav Items
     .nav-primary{
-
       .menu-home-container{
-        margin: auto;
+        margin: 0 auto 0.5em;
         .menu-item{
           font-size: 4vw;
         }
@@ -67,7 +65,6 @@
       font-size: 12vw;
       //Nav Items
       .nav-primary{
-
         .menu-home-container{
           .menu-item{
             font-size: 6vw;
