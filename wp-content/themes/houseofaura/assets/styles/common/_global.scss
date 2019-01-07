@@ -33,7 +33,7 @@ body {
   }
 
   .img{
-    width: 40%;
+    width: 30%;
     border-radius: 1%;
   }
 }
@@ -76,9 +76,10 @@ body {
 
 //Contact Page
 .contact{
-  // display: flex;
+  display: flex;
+  
   .info {
-    align-self: center;
+
     width: 30%;
     margin: auto;
     outline: 4px solid black;
@@ -202,7 +203,12 @@ a:visited {
   }
   //Contact Page
   .contact{
+    // display: flex;
+    // margin-top: 50%;
     .info {
+      // align-self: center;
+      // flex: 1;
+
       width: 50%;
     }
   }
