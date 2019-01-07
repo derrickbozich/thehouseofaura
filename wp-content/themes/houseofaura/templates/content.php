@@ -6,9 +6,6 @@
   </header>
   <div class="entry-summary">
     <?php the_content(); ?>
-    <!-- <div class="acf-test">
-      <?php // echo get_field('email') ?>
-    </div> -->
   </div>
 
 </article>

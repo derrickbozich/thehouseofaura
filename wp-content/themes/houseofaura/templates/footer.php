@@ -39,8 +39,6 @@
       }
     </script>
 
-
-
   </div>
   <div class="copyright">&copy; 2019</div>
   <a href="http://www.derrickbozich.com"><div class="author">by derrick bozich</div></a>
