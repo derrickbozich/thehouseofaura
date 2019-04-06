@@ -13,7 +13,7 @@
 body {
   font-family: 'auraregular', serif;
   text-align: center;
-  background-image: url("http://devlocal.the-house-of-aura.com/wp-content/uploads/2018/12/xerox-texture1.2-1.jpg");
+  background-image: url(../images/xerox-texture1.2.jpg);
   // filter: blur(0.2px);
   line-height: 1.3;
 
@@ -96,8 +96,18 @@ body {
 
 //Home Page
 .home {
+  // background-image: url(../images/home.png);
+  // background-size: contain;
+  // background-repeat: no-repeat;
+  // background-position: center;
+
+  // margin-top: 6em;
+
+  // padding-top: 6em;
+
+  
   img {
-    width: 60%;
+    width: 50%;
   }
 }
 
